@@ -1,0 +1,6 @@
+mixin social(social_name,social_link,social_mod)
+	div(class='social' class=social_mod)
+		ul.social__list
+			for name,i in social_name
+				li.social__item
+					a(class='social__link social__link--'+name href=social_link[i])

@@ -1,0 +1,95 @@
+@mixin social($social-size) {
+  @font-face {
+    font-family: 'si';
+    src: url('icons/social/socicon.eot');
+    src: url('icons/social/socicon.eot?#iefix') format('embedded-opentype'),
+    url('icons/social/socicon.woff') format('woff'),
+    url('icons/social/socicon.ttf') format('truetype'),
+    url('icons/social/socicon.svg#icomoonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: si;
+      src: url(icons/social/socicon.svg) format(svg);
+    }
+  }
+
+  .social__list {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .social__item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+  }
+
+  .social__link {
+    font-family: si !important;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: $social-size;
+    height: $social-size;
+    line-height: $social-size;
+    font-size: $social-size/1.6;
+    -webkit-border-radius: $social-size/4;
+    -moz-border-radius: $social-size/4;
+    border-radius: $social-size/4;
+    margin-right: $social-size/4;
+    color: #ffffff;
+    background-color: none;
+  }
+
+  .soc-icon-last {
+    margin: 0 !important;
+  }
+
+  .social__link--vk {
+    background-color: #5a7fa6;
+  }
+  .social__link--vk:before {
+    content: ';';
+  }
+  .social__link--github {
+    background-color: #5380c0;
+  }
+  .social__link--github:before {
+    content: 'Q';
+  }
+  .social__link--twitter {
+    background-color: #4da7de;
+  }
+  .social__link--twitter:before {
+    content: 'a';
+  }
+
+  .social__link--vk:hover {
+    background-color: #6e93ba;
+  }
+  .social__link--github:hover {
+    background-color: #6794d4;
+  }
+  .social__link--twitter:hover {
+    background-color: #61bbf2;
+  }
+}
