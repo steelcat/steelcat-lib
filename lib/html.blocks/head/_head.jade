@@ -1,7 +1,8 @@
-mixin head(head_css, head_title)
+mixin head(title, css, js)
 	head
 		meta(charset='utf-8')
 		meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimal-ui')
 		meta(http-equiv='X-UA-Compatible' content='IE=edge')
-		title #{head_title}
-		link(href=head_css rel='stylesheet')
+		title #{title}
+		each css_item in css
+			link(href=css_item rel='stylesheet')
