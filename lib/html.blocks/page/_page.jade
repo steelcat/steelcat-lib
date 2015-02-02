@@ -8,5 +8,5 @@ mixin page(title, css, js)
 			title #{title}
 			each css_item in css
 				link(href=css_item rel='stylesheet')
-		body
+		body.page
 			block
